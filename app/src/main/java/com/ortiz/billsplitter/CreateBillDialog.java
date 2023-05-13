@@ -9,24 +9,19 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ortiz.billsplitter.Listeners.CreateBillDialogListener;
-import com.ortiz.billsplitter.Listeners.CreateBillDialogListenerImpl;
 import com.ortiz.billsplitter.Models.Bill;
 import com.ortiz.billsplitter.Service.BillsService;
 
-import java.util.Date;
 import java.util.List;
 
 public class CreateBillDialog extends AppCompatDialogFragment {
 
     private EditText etBillName;
-    private CreateBillDialogListener listener;
     private RecyclerView recyclerView;
     private List<Bill> bills;
     private Context context;
@@ -47,38 +42,16 @@ public class CreateBillDialog extends AppCompatDialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_create_bill, null);
         recyclerView = view.findViewById(R.id.recyclerViewBills);
-        listener = new CreateBillDialogListenerImpl(context);
 
-
+        // This opens the Dialog and allows us to add logic to control the buttons
         builder.setView(view).setTitle("Create Bill")
-                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                })
-                .setPositiveButton("create", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        String billName = etBillName.getText().toString();
-                        Bill createdBill = new Bill(billName, new Date(System.currentTimeMillis()));
-                        billsService.insertBillIntoRecyclerView(createdBill, bills);
-                        //listener.applyText(billName);
-                        Log.i("BillName", "The bill name is: " + billName);
-                    }
+                .setNegativeButton("cancel", (dialogInterface, i) -> {})
+                .setPositiveButton("create", (dialogInterface, i) -> {
+                    String billName = etBillName.getText().toString();
+                    billsService.insertBillIntoRecyclerView(
+                            billsService.createBill(billName), bills);
                 });
         etBillName = view.findViewById(R.id.dialog_create_bill);
         return builder.create();
-    }
-
-    @Override
-    public void onAttach(@NonNull Context ctxt) {
-        super.onAttach(context);
-//        try {
-//            listener = (CreateBillDialogListener) ctxt;
-//        }catch (ClassCastException e)
-//        {
-//            throw new ClassCastException(e.getMessage());
-//        }
     }
 }

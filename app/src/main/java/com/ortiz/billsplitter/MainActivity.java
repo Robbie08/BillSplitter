@@ -52,13 +52,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         billsRecyclerView = findViewById(R.id.recyclerViewBills);
         billsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Helps Autowire the recycler view and context into fragments
         billsService = new BillsServiceImpl(this, billsRecyclerView);
 
-        bills.add(billsService.createBill("RakiRaki", 85.62, 4.50, 12.00));
-        bills.add(billsService.createBill("Javier's", 143.23, 12.66, 30.23));
-        bills.add(billsService.createBill("Red O's", 125.27, 10.36, 25.26));
-        bills.add(billsService.createBill("Papa Johns Pizza", 85.62, 4.50, 12.00));
-        bills.add(billsService.createBill("Sammy's", 143.23, 12.66, 30.23));
+        bills.add(billsService.createBill("RakiRaki"));
+        bills.add(billsService.createBill("Javier's"));
+        bills.add(billsService.createBill("Red O's"));
+        bills.add(billsService.createBill("Papa Johns Pizza"));
+        bills.add(billsService.createBill("Sammy's"));
 
         setRecyclerViewAdapter(billsRecyclerView);
     }
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     private void setRecyclerViewAdapter(RecyclerView recyclerView)
     {
-        recyclerView.setAdapter(new BillAdapter(getApplicationContext(), bills, listener));
+        recyclerView.setAdapter(new BillAdapter(getApplicationContext(), bills, listener, billsService));
     }
 
 
