@@ -3,14 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/activity_bill.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/activity_bills.xml" value="0.29936594202898553" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/activity_create_bill.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/activity_create_item.xml" value="0.2734375" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/activity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/bill_view.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/content_bill.xml" value="0.234375" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/content_bill_item.xml" value="0.2734375" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/content_main.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/dialog_create_bill.xml" value="0.20885416666666667" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/fragment_first.xml" value="0.2977777777777778" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/fragment_second.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/rv_bill_view.xml" value="0.1" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/layout/rv_content_bill_item.xml" value="0.17291666666666666" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/menu/bottom_nav_menu_create_bill_activity.xml" value="0.3" />
+        <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/menu/bottom_nav_menu_create_item_activity.xml" value="0.2734375" />
         <entry key="..\:/Users/ortiz/AndroidStudioProjects/BillSplitter/app/src/main/res/menu/menu_main.xml" value="0.284375" />
       </map>
     </option>

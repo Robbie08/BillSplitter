@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BillSplitter">
         <activity
+            android:name=".CreateItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateBillActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

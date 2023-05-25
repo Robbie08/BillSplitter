@@ -1,8 +1,9 @@
 package com.ortiz.billsplitter.Models;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Bill {
+public class Bill implements Serializable {
     private String name;
     private List<Item> items;
     private Double subTotal;

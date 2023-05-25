@@ -3,7 +3,6 @@ package com.ortiz.billsplitter.Adapters;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -37,7 +36,7 @@ public class BillAdapter extends RecyclerView.Adapter<BillsViewHolder> {
     @Override
     public BillsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        return new BillsViewHolder(LayoutInflater.from(context).inflate(R.layout.bill_view, parent, false));
+        return new BillsViewHolder(LayoutInflater.from(context).inflate(R.layout.rv_bills_bill_view, parent, false));
     }
 
     @Override

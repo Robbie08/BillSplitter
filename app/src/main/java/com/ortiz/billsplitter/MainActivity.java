@@ -1,5 +1,6 @@
 package com.ortiz.billsplitter;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     RecyclerView billsRecyclerView;
     BottomNavigationView bottomNavigationView;
     List<Bill> bills;
-    String recyclerViewName = "RV_BILLS";
     SelectListener listener;
     BillsService billsService;
 
@@ -71,12 +71,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return true;
     }
 
-    private void displayCreateBillsDialog()
-    {
-        CreateBillDialog createBillDialog = new CreateBillDialog(bills, this, billsService);
-        createBillDialog.show(getSupportFragmentManager(), "Create Bill Dialog");
-    }
-
 
     private void setRecyclerViewAdapter(RecyclerView recyclerView)
     {
@@ -99,7 +93,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
             case R.id.mItemAddBill:
                 Log.i("OnNavigationItemReselected", "Add Bill got clicked");
-                displayCreateBillsDialog(); // this dialog allows us to create bills
+                Intent intent = new Intent(getApplicationContext(), CreateBillActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.mItemSettings:
                 Log.i("OnNavigationItemReselected", "Settings got clicked");

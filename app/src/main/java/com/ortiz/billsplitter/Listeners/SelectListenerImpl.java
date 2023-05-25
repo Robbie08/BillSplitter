@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import com.ortiz.billsplitter.Listeners.SelectListener;
 import com.ortiz.billsplitter.Models.Bill;
+import com.ortiz.billsplitter.Models.Item;
 
 public class SelectListenerImpl implements SelectListener {
 
@@ -26,6 +27,16 @@ public class SelectListenerImpl implements SelectListener {
     @Override
     public void onItemClicked(Bill bill) {
         Toast.makeText(this.context, bill.getName(), Toast.LENGTH_SHORT).show();
+        // When the item gets clicked, open a new Activity
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public void onItemClicked(Item item) {
+        Toast.makeText(this.context, item.getName(), Toast.LENGTH_SHORT).show();
         // When the item gets clicked, open a new Activity
     }
 }

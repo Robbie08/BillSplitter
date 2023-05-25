@@ -6,10 +6,12 @@ import android.util.Log;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ortiz.billsplitter.Models.Bill;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class BillsServiceImpl implements BillsService{
+public class BillsServiceImpl implements BillsService, Serializable {
 
     Context context;
     RecyclerView recyclerView;
