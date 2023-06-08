@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvCreateItemActivityItems"
+                android:id="@+id/rvCreateItemActivityUsers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"

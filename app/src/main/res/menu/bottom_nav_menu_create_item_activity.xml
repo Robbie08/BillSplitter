@@ -7,7 +7,7 @@
     <item android:id="@+id/mItemSearch"
         android:title="Search"
         android:icon="@drawable/ic_search"/>
-    <item android:id="@+id/mItemAddConsumer"
+    <item android:id="@+id/mItemAddUser"
         android:title="Add User"
         android:icon="@drawable/ic_add"/>
     <item android:id="@+id/mItemProfile"

@@ -52,6 +52,7 @@ public class CreateItemDialog extends AppCompatDialogFragment {
                 .setNegativeButton("cancel", (dialogInterface, i) -> {})
                 .setPositiveButton("create", (dialogInterface, i) -> {
                     String billName = etBillName.getText().toString();
+                    Log.i("DIALOG", String.format("BillName: %s", billName));
 //                    itemService.insertItemIntoRecyclerView(
 //                            itemService.createItem(billName, items), bills);
 
